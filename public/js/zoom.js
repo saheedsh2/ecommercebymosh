@@ -1,29 +1,3 @@
-function toggleFullscreen(elem) {
-    elem = elem || document.documentElement;
-    if (!document.fullscreenElement && !document.mozFullScreenElement &&
-      !document.webkitFullscreenElement && !document.msFullscreenElement) {
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
-      } else if (elem.mozRequestFullScreen) {
-        elem.mozRequestFullScreen();
-      } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-      }
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      }
-    }
-}
-  
-document.querySelector('.button-zoom-maximize').addEventListener('click', function() {
-    toggleFullscreen();
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:a8f498147787918462e7d378a369024f22e4e2d74515769b0fd7f489b59438f2
+size 1068

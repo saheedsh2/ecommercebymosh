@@ -1,13 +1,3 @@
-<?php
-
-namespace App\Models;
-
-use Illuminate\Database\Eloquent\Model;
-
-class Category extends Model
-{
-    public function products()
-    {
-        return $this->hasMany(Product::class);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1e89544a2cd9aca6fd4a7e9db809437efa6ed56d419523768961732b6e57326
+size 194

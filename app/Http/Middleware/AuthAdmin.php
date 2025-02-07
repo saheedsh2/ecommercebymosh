@@ -1,36 +1,3 @@
-<?php
-
-namespace App\Http\Middleware;
-
-use Closure;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
-use Symfony\Component\HttpFoundation\Response;
-
-class AuthAdmin
-{
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
-    public function handle(Request $request, Closure $next): Response
-    {
-        if(Auth::check())
-        {
-            if(Auth::user()->utype==='ADM')
-            {
-                return $next($request);
-            }
-            else {
-                Session::flush();
-                return redirect()->route('login');
-            }
-        }
-        else{
-            return redirect()->route('login');
-        }
-       
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a81843c71f85b19b4836739bc70884d0e935ef2f84ab156c42619d32cd531c36
+size 824
